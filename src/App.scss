@@ -1,1 +1,13 @@
 @import 'shared.scss';
+
+.app-container {
+    width: 100vw;
+    min-height: 100vh;
+
+    @include theme() {
+        color: theme-get('color-text');
+        background-color: theme-get('bg-body');
+    }
+
+    transition: color .3s ease, background-color .3s ease;
+}

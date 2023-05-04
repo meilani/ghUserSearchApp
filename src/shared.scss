@@ -1,0 +1,52 @@
+/** THEMES **/
+
+$themes: (
+  darkTheme: (
+    'bg-body': #141D2F,
+    'color-header': #fff,
+    'color-text': #fff,
+    'bg-div': #1e2a47,
+    'color-text-alt': #fff,
+    'bg-stats': #141d2f,
+    'color-date': #fff
+  ),
+  lightTheme: (
+    'bg-body': #F6F8FF,
+    'color-header': #2b3442,
+    'color-text': #4b6a9b,
+    'bg-div': #697c9a,
+    'color-text-alt': #4b6a9b,
+    'bg-stats': #f6f8ff,
+    'color-date': #697c9a
+  )
+);
+
+@mixin theme() {
+    @each $theme, $map in $themes {
+      $theme-map: $map !global;
+      .#{$theme} & {
+        @content;
+      }
+    }
+    $theme-map: null !global;
+}
+  
+@function theme-get($key) {
+    @return map-get($theme-map, $key);
+}
+
+/** VARIABLES **/
+
+$bgBody: theme-get('bg-body');
+$bgBtn: #0079FF;
+$bgDiv: theme-get('bg-div');
+$bgStats: theme-get('bg-stats');
+$colorBtn: #fff;
+$colorHeader: theme-get('color-header');
+$colorText: theme-get('color-text');
+$colorTextAlt: theme-get('color-text-alt');
+$colorDate: theme-get('color-date');
+$borderRadiusBtn: 10px;
+$borderRadiusDiv: 15px;
+$fontSize: 15px;
+$fontSizeMobile: 13px;

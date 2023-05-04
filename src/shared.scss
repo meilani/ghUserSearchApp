@@ -20,16 +20,27 @@ $themes: (
     'color-date': #697c9a
   )
 );
+$theme-map: null;
 
 @mixin theme() {
-    @each $theme, $map in $themes {
-      $theme-map: $map !global;
-      .#{$theme} & {
-        @content;
-      }
+  @each $theme, $map in $themes {
+    // $theme: darkTheme, lightTheme
+    // $map: ('text-color': ..., 'bg-color': ...)
+
+    // make the $map globally accessible, so that theme-get() can access it
+    $theme-map: $map !global;
+
+    // make a class for each theme using interpolation -> #{}
+    // use & for making the theme class ancestor of the class
+    // from which you use @include theme() {...}
+    .#{$theme} & {
+      @content;    // the content inside @include theme() {...}
     }
-    $theme-map: null !global;
+  }
+  // no use of the variable $theme-map now
+  $theme-map: null !global;
 }
+
   
 @function theme-get($key) {
     @return map-get($theme-map, $key);
@@ -37,15 +48,6 @@ $themes: (
 
 /** VARIABLES **/
 
-$bgBody: theme-get('bg-body');
-$bgBtn: #0079FF;
-$bgDiv: theme-get('bg-div');
-$bgStats: theme-get('bg-stats');
-$colorBtn: #fff;
-$colorHeader: theme-get('color-header');
-$colorText: theme-get('color-text');
-$colorTextAlt: theme-get('color-text-alt');
-$colorDate: theme-get('color-date');
 $borderRadiusBtn: 10px;
 $borderRadiusDiv: 15px;
 $fontSize: 15px;

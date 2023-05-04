@@ -1,13 +1,48 @@
 @import 'shared.scss';
 
+h1 {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+.container {
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+}
+
 .app-container {
     width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease, background-color .3s ease;
 
     @include theme() {
         color: theme-get('color-text');
         background-color: theme-get('bg-body');
     }
 
-    transition: color .3s ease, background-color .3s ease;
+    > * {
+        width: 100%;
+    }
+
+}
+
+/** HEADER **/
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mode-btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    @include theme() {
+        color: theme-get('color-text');
+    }
 }

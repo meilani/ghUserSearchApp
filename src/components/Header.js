@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 
 const Header = ({ theme, setTheme }) => {
     const handleTheme = () => {
@@ -12,7 +12,10 @@ const Header = ({ theme, setTheme }) => {
                     <h1>devfinder</h1>
                 </div>
                 <div className="col col-2">
-                    <button onClick={handleTheme}>{btnText}</button>
+                    <button 
+                        className="mode-btn"
+                        onClick={handleTheme}
+                    >{btnText}</button>
                 </div>
             </div>
         </header>

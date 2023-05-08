@@ -8,16 +8,24 @@ $themes: (
     'bg-div': #1e2a47,
     'color-text-alt': #fff,
     'bg-stats': #141d2f,
-    'color-date': #fff
+    'color-date': #fff,
+    'mode-img': url(./images/icon-sun.svg),
+    'mode-img-hover': url(./images/icon-sun-hover.svg),
+    'color-mode-hover': #90a4d4,
+    'color-placeholder': #fff
   ),
   lightTheme: (
     'bg-body': #F6F8FF,
     'color-header': #2b3442,
     'color-text': #4b6a9b,
-    'bg-div': #697c9a,
+    'bg-div': #fefefe,
     'color-text-alt': #4b6a9b,
     'bg-stats': #f6f8ff,
-    'color-date': #697c9a
+    'color-date': #697c9a,
+    'mode-img': url(./images/icon-moon.svg),
+    'mode-img-hover': url(./images/icon-moon-hover.svg),
+    'color-mode-hover': #222731,
+    'color-placeholder': #4B6A9B
   )
 );
 $theme-map: null;

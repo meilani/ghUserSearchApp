@@ -92,6 +92,7 @@ header {
     justify-content: space-between;
 
     @include theme() {
+        box-shadow: theme-get('shadow-div');
         background-color: theme-get('bg-div');
     }
 }
@@ -115,6 +116,12 @@ header {
     margin-left: 3rem;
     border: none;
     background-color: transparent;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    caret-color: hsl(212, 100%, 50%);
+    @include theme() {
+        color: theme-get('color-input');
+    }
 
     &::placeholder {
         font-family: 'Space Mono', monospace;

@@ -2,9 +2,11 @@
 
 $themes: (
   darkTheme: (
+    'shadow-div': none,
     'bg-body': #141D2F,
     'color-header': #fff,
     'color-text': #fff,
+    'color-input': #fff,
     'bg-div': #1e2a47,
     'color-text-alt': #fff,
     'bg-stats': #141d2f,
@@ -15,9 +17,11 @@ $themes: (
     'color-placeholder': #fff
   ),
   lightTheme: (
+    'shadow-div': 0px 16px 30px -10px rgba(70, 96, 187, 0.198567),
     'bg-body': #F6F8FF,
     'color-header': #2b3442,
     'color-text': #4b6a9b,
+    'color-input': #222731,
     'bg-div': #fefefe,
     'color-text-alt': #4b6a9b,
     'bg-stats': #f6f8ff,
@@ -60,3 +64,4 @@ $borderRadiusBtn: 10px;
 $borderRadiusDiv: 15px;
 $fontSize: 15px;
 $fontSizeMobile: 13px;
+$boxShadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);

@@ -83,6 +83,13 @@ header {
     }
 }
 
+/** MAIN **/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 /** SEARCHBAR **/
 
 .searchbar-container {
@@ -147,4 +154,12 @@ header {
     &:hover {
         background-color: hsl(212, 100%, 69%);
     }
+}
+
+/** USER INFO **/
+
+.useriinfo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }

@@ -1,7 +1,7 @@
 const SearchBar = () => {
     return (
         <div className="container searchbar-container">
-            <label for="search-input" className="search-label">
+            <label htmlFor="search-input" className="search-label">
                 <span className="hidden-text">Search for a Github profile by username</span>
             </label>
             <input 

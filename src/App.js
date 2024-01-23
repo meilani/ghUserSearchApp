@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
+import UserInfo from './components/UserInfo';
 
 import './App.scss';
 
@@ -16,6 +17,7 @@ function App() {
         <Header theme={theme} setTheme={setTheme} />
         <main>
           <SearchBar />
+          <UserInfo />
         </main>
       </div>
     </div>
